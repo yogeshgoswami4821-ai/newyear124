@@ -1,0 +1,80 @@
+/* General Styles */
+:root {
+    --primary-red: #d63031;
+    --dark-green: #2d3436;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    align-items: center;
+    background: var(--white);
+}
+
+.logo { font-size: 24px; font-weight: bold; color: var(--primary-red); }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: #333; font-weight: 500; }
+
+/* Hero Section */
+.hero {
+    background: var(--primary-red);
+    color: white;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    border-radius: 0 0 50px 50px; /* Rounded bottom like your image */
+    overflow: hidden;
+}
+
+.hero-content h1 { font-size: 4rem; margin-bottom: 10px; }
+.hero-image img { height: 80vh; transform: translateY(50px); }
+
+/* Buttons */
+.btn-primary {
+    padding: 12px 30px;
+    background: white;
+    color: var(--primary-red);
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Wishes Section */
+.wishes { padding: 50px 10%; text-align: center; }
+.section-title { font-size: 2.5rem; color: var(--primary-red); margin-bottom: 40px; }
+
+.wish-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.wish-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    width: 300px;
+}
+
+.wish-card img { width: 150px; margin-bottom: 15px; }
+.btn-secondary {
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
