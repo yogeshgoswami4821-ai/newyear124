@@ -3,48 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surprise Christmas | Celebrate & Wish</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Merry Christmas | Celebrate & Wish</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --holiday-red: #d63031;
+            --snow-white: #fdfdfd;
+            --forest-green: #2d5a27;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--snow-white);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section with Curved Design */
+        .hero {
+            background: linear-gradient(135deg, #ff7675, #d63031);
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            border-bottom-left-radius: 50% 15%;
+            border-bottom-right-radius: 50% 15%;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 6rem;
+            margin: 0;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        /* Floating Decorations */
+        .decoration {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.8;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Wishes Section (Inspired by website3.jpeg) */
+        .wishes-section {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: var(--holiday-red);
+            margin-bottom: 50px;
+        }
+
+        .wish-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .wish-card {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .wish-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .wish-card img {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .wish-card h3 {
+            color: var(--holiday-red);
+            font-size: 1.8rem;
+        }
+
+        .wish-card p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Celebration Join Button */
+        .join-btn {
+            background: var(--holiday-red);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(214, 48, 49, 0.3);
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Surprise <span>Christmas</span></div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Wish</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="nav-icons">🔍 👤 🛒</div>
-    </nav>
+    <section class="hero">
+        <div class="decoration" style="top:10%; left:10%;">❄️</div>
+        <div class="decoration" style="top:20%; right:15%;">🎁</div>
+        <div class="decoration" style="bottom:20%; left:15%;">🔔</div>
+        
+        <h1>Merry Christmas</h1>
+        <p>Celebrate & Wish with your loved ones. May your heart be light and your days be merry and bright.</p>
+        <button class="join-btn">Join the Celebration</button>
+    </section>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Merry Christmas</h1>
-            <p>Celebrate the season with our trendy collection and heartfelt wishes.</p>
-            <button class="btn-primary">Shop Now</button>
-        </div>
-        <div class="hero-image">
-            <img src="https://pngimg.com/uploads/christmas_tree/christmas_tree_PNG131.png" alt="Christmas Tree">
-        </div>
-    </header>
-
-    <section class="wishes">
+    <section class="wishes-section">
         <h2 class="section-title">Best Wishes</h2>
-        <div class="wish-container">
+        <div class="wish-grid">
+            
             <div class="wish-card">
                 <img src="https://pngimg.com/uploads/santa_claus/santa_claus_PNG9956.png" alt="Santa">
                 <h3>Harry Mike Wishes</h3>
-                <p>May your holidays be filled with laughter and light!</p>
-                <button class="btn-secondary">Read More</button>
+                <p>Sending you the warmest greetings of this festive season and wishing you a New Year full of happiness!</p>
             </div>
+
             <div class="wish-card">
                 <img src="https://pngimg.com/uploads/snowman/snowman_PNG9.png" alt="Snowman">
                 <h3>John Max Wishes</h3>
-                <p>Wishing you a flurry of fun this holiday season!</p>
-                <button class="btn-secondary">Read More</button>
+                <p>May the magic and the wonder of the holiday season stay with you throughout the coming year.</p>
             </div>
+
         </div>
     </section>
 
